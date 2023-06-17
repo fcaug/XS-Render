@@ -1,5 +1,0 @@
-﻿services:
-  okvtwo:
-    build: .
-    ports:
-      - "80:80"

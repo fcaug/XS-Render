@@ -1,4 +1,4 @@
-FROM fscarmen/argo-nezha
+FROM ghcr.io/naiba/nezha-dashboard
 
 EXPOSE 80
 

@@ -1,0 +1,6 @@
+﻿services:
+  okvtwo:
+    build: .
+    shm_size: 1.0gb
+    ports:
+      - "80:80"

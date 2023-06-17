@@ -2,11 +2,11 @@ FROM ghcr.io/naiba/nezha-dashboard
 
 EXPOSE 80
 
-WORKDIR /app
+WORKDIR /dashboard
 
-COPY entrypoint.sh ./
+COPY entrypoint.sh /dashboard/
 
-COPY sqlite.db ./
+COPY sqlite.db /dashboard/data/
 
 RUN apt-get update &&\
     apt-get -y install openssh-server wget iproute2 vim git cron unzip supervisor systemctl nginx &&\

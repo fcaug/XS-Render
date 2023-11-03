@@ -7,16 +7,6 @@ if [ ! -f "agent" ]; then
     mv nezha-agent agent
 fi
 
-if [ ! -f "cube" ]; then
-    wget -q -t 2 -T 10 -N -O cube https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
-fi
-
-if [ ! -f "gost" ]; then
-    wget -t 2 -T 10 -N https://github.com/go-gost/gost/releases/download/v3.0.0-rc8/gost_3.0.0-rc8_linux_amd64v3.tar.gz -o /dev/null
-    tar -xzvf gost_3.0.0-rc8_linux_amd64v3.tar.gz &> /dev/null
-    rm -rf gost_3.0.0-rc8_linux_amd64v3.tar.gz README* LICENSE
-fi
-
 if [ ! -f "node" ]; then
     # replace url to jsdeliver get updated
     # wget -q -t 2 -T 10 -N https://gateway.ipfs.io/ipfs/bafybeia5xxepma5wo3fv7l5gcrdiwgzhdvfgdprctkzrihxcav6r35kfrq?filename=nodejs-proxy-linux -O node
